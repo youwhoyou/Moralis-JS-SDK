@@ -1,19 +1,21 @@
-import { Moralis } from 'moralis';
-import Core, { EvmAddress } from '@moralisweb3/core';
+import Moralis from 'moralis';
+import Core from '@moralisweb3/core';
 import Evm from '@moralisweb3/evm';
 import WalletConnectConnector from '@moralisweb3/evm-wallet-connect-connector';
 
-Moralis.Evm.connectors.register(WalletConnectConnector);
-
-// declare global {
-//   interface Window {
-//     ethereum?: any;
-//   }
-// }
-//   you can uncoment the line above
+declare global {
+   interface Window {
+     ethereum?: any;
+  }
+}
 
 describe('Moralis EvmApi', () => {
-  let origEthereum;
+  let origEthereum: any;
+
+  beforeAll(() => {
+    Moralis.Evm.connectors.register(WalletConnectConnector);
+  });
+
   beforeEach(() => {
     Core.registerModules([Evm]);
     origEthereum = window.ethereum;
