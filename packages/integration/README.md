@@ -1,8 +1,8 @@
 # Integration Tests
 
-### 🚨 My test stuck, what should I do?
+### 🚨 My test is stuck, what should I do?
 
-`ts-jest` unluckily, is a very sensitive tool. If our TypeScript code contains any warning or any error, then `jest` will freeze. Furthermore, we don't see any information about that on the console. To debug that problem we should set the environment variable [TS_JEST_LOG](https://kulshekhar.github.io/ts-jest/docs/debugging/).
+`ts-jest` unluckily, is a very sensitive tool. If our TypeScript code contains any warning or any error, then `jest` will freeze. Furthermore, we don't see any information about that in the console. To debug that problem we should set the environment variable [TS_JEST_LOG](https://kulshekhar.github.io/ts-jest/docs/debugging/).
 
 Linux/MacOS:
 
