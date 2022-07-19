@@ -5,7 +5,7 @@ import {
   EvmWalletConnectConnectorOptions,
 } from '@moralisweb3/core';
 import { IDefaultCallbacks } from '../../types';
-export interface IConnectParams {
+export interface IEvmConnect {
   (
     connector: 'metamask',
     options?: EvmMetamaskConnectorConnectOptions & IDefaultCallbacks<EvmConnectionData>,
