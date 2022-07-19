@@ -19,7 +19,8 @@ const App = () => {
     value: '0.1',
   });
   const { chain } = useEvmChain();
-  const { account, connect } = useEvmAccount();
+  const { connect, disconnect } = useMoralisEvm();
+  const { account } = useEvmAccount();
   const { isConnected } = useMoralisEvm();
   const { sign } = useEvmSignMessage();
   // const { isStarting, isStarted } = useMoralisCore();
@@ -38,7 +39,7 @@ const App = () => {
       <div>Account: {account?.checksum}</div>
       <div>Chain: {chain?.name}</div>
       <div>isConnected: {isConnected ? 'yes' : 'no'}</div>
-      <button onClick={() => connect('metamask')}>Connect</button>
+      <button onClick={() => connect('')}>Connect</button>
       <button
         onClick={async () => {
           // const data = await execute({ functionName: 'name' });
@@ -48,7 +49,7 @@ const App = () => {
       >
         execute Link Contract
       </button>
-      <button onClick={() => sign('message', {})}>Sign Message</button>
+      <button onClick={() => sign('m', {})}>Sign Message</button>
       <button onClick={() => switchChain('0x61', { onSuccess: () => console.log('kek') })}>Switch to 0x61 Chain</button>
       <button onClick={() => addChainToWallet('0x61')}>Add 0x61 Chain To Wallet(</button>
       <button onClick={() => transfer({ onError: (err) => console.log('errFck: ', err) })}>Transfer Native</button>
