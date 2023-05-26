@@ -1,5 +1,16 @@
 # @moralisweb3/sol-utils
 
+## 2.22.0
+
+### Minor Changes
+
+- [#1132](https://github.com/MoralisWeb3/Moralis-JS-SDK/pull/1132) [`9dc253b1`](https://github.com/MoralisWeb3/Moralis-JS-SDK/commit/9dc253b1e854f42599d55220e5354b830a6c2001) Thanks [@b4rtaz](https://github.com/b4rtaz)! - The `getTokenPrice` API method from the Sol API module returns the `nativePrice.value` property as a string from now. Also the `nativePrice` object is optional now.
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @moralisweb3/common-core@2.22.0
+
 ## 2.21.0
 
 ### Patch Changes
